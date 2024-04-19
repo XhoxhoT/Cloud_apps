@@ -18,3 +18,14 @@ security:
   user:
     name: user
 password: user
+
+# Logging configuration
+logging:
+  level:
+    root: INFO
+  file:
+    name: C:\Users\Public\Logs\lab.log
+    max-size: 10MB
+    append: true
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
