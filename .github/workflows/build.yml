@@ -22,3 +22,6 @@ jobs:
           password:  ${{ secrets.DOCKER_HUB_PASSWORD }}
           repository: xhoni/cloudapps
           tags: ${{github.run_number}}
+
+
+# creating docker container and pushing to dockerub
