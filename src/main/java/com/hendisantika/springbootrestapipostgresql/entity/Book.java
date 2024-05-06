@@ -35,7 +35,7 @@ public class Book {
     @Column(name = "Value")
     private List<String> tags = new ArrayList<>();
 
-    public Book(String name, String description, List<String> tags) {
+    public Book(String name, String description) {
         this.name = name;
         this.description = description;
         this.tags = tags;
