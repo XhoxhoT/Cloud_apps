@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Author.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">spring-boot-rest-api-postgresql</a> &gt; <a href="index.source.html" class="el_package">com.hendisantika.springbootrestapipostgresql.entity</a> &gt; <span class="el_source">Author.java</span></div><h1>Author.java</h1><pre class="source lang-java linenums">package com.hendisantika.springbootrestapipostgresql.entity;
+
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by IntelliJ IDEA.
+ * Project : spring-boot-rest-api-postgresql
+ * User: hendisantika
+ * Email: hendisantika@gmail.com
+ * Telegram : @hendisantika34
+ * Date: 2019-01-18
+ * Time: 22:05
+ * To change this template use File | Settings | File Templates.
+ */
+@Entity
+public class Author {
+
+
+    private String ISBN;
+    private String name;
+
+    private String surname;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+
+
+<span class="fc" id="L39">    public Author(String ISBN, String name, String surname) {</span>
+<span class="fc" id="L40">        this.ISBN = ISBN;</span>
+<span class="fc" id="L41">        this.name = name;</span>
+<span class="fc" id="L42">        this.surname = surname;</span>
+<span class="fc" id="L43">    }</span>
+
+<span class="fc" id="L45">    public Author() {</span>
+<span class="fc" id="L46">    }</span>
+
+    public String getISBN() {
+<span class="fc" id="L49">        return ISBN;</span>
+    }
+
+    public void setISBN(String ISBN) {
+<span class="fc" id="L53">        this.ISBN = ISBN;</span>
+<span class="fc" id="L54">    }</span>
+
+    public String getName() {
+<span class="fc" id="L57">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="fc" id="L61">        this.name = name;</span>
+<span class="fc" id="L62">    }</span>
+
+    public String getSurname() {
+<span class="fc" id="L65">        return surname;</span>
+    }
+
+    public void setSurname(String surname) {
+<span class="fc" id="L69">        this.surname = surname;</span>
+<span class="fc" id="L70">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L74">        return &quot;Author{&quot; +</span>
+                &quot;ISBN='&quot; + ISBN + '\'' +
+                &quot;, name='&quot; + name + '\'' +
+                &quot;, surname='&quot; + surname + '\'' +
+                '}';
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

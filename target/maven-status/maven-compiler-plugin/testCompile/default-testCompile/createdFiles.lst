@@ -1,0 +1,3 @@
+com\hendisantika\springbootrestapipostgresql\SpringBootRestApiPostgresqlApplicationTests.class
+com\hendisantika\springbootrestapipostgresql\BookRestController\BookRestControllerTest.class
+com\hendisantika\springbootrestapipostgresql\AuthorRestController\AuthorRestControllerTest.class

@@ -1,3 +1,7 @@
 com\hendisantika\springbootrestapipostgresql\repository\AuthorRepository.class
+com\hendisantika\springbootrestapipostgresql\SpringBootRestApiPostgresqlApplication.class
+com\hendisantika\springbootrestapipostgresql\entity\Book.class
+com\hendisantika\springbootrestapipostgresql\repository\BookRepository.class
 com\hendisantika\springbootrestapipostgresql\controller\AuthorRestController.class
+com\hendisantika\springbootrestapipostgresql\controller\BookRestController.class
 com\hendisantika\springbootrestapipostgresql\entity\Author.class

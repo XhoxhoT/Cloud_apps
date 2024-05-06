@@ -29,3 +29,9 @@ logging:
     append: true
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
+
+
+
+#Komanda qe te besh run reportet e jococombos
+    #mvn clean test jacoco:report
+    #Mrp te target site ke reportin
