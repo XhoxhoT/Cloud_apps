@@ -1,23 +1,27 @@
+
+#url : jdbc:postgresql://flora.db.elephantsql.com:5432/dsouclan
+#username: dsouclan
+#password: zj3xUytnbssVNPOgNykm9HSotos27nzD
 # Spring Boot configuration
 spring:
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://flora.db.elephantsql.com:5432/dsouclan
-    username: dsouclan
-    password: zj3xUytnbssVNPOgNykm9HSotos27nzD
+    url: jdbc:postgresql://tai.db.elephantsql.com:5432/rknrxxjn
+    username: rknrxxjn
+    password: twWQ7eKPWZJ_MGAVxIqLeifCu90opHXu
   # JPA properties
   jpa:
     hibernate.ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 # Server configuration
 server:
-  port: 8080
+  port: 8081
 # Security configuration
-security:
-  user:
-    name: user
-password: user
+#security:
+  #user:
+    #name: user
+    #password: user
 
 # Logging configuration
 logging:
@@ -30,6 +34,19 @@ logging:
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
 
+
+#OAuth settings
+  spring:
+    security:
+      oauth2:
+        client:
+          registration:
+            github:
+              clientId: Ov23linQiavRp6Mnwb8p
+              clientSecret: 9dc1923ed24e320ada0f0d9d45e4b26883c0cc1d
+              scope:
+                - user:email
+                - read:user
 
 
 #Komanda qe te besh run reportet e jococombos
