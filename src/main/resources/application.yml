@@ -2,26 +2,39 @@
 #url : jdbc:postgresql://flora.db.elephantsql.com:5432/dsouclan
 #username: dsouclan
 #password: zj3xUytnbssVNPOgNykm9HSotos27nzD
+
+#    url: jdbc:postgresql://tai.db.elephantsql.com:5432/rknrxxjn
+#    username: rknrxxjn
+#    password: twWQ7eKPWZJ_MGAVxIqLeifCu90opHXu
+
+
 # Spring Boot configuration
 spring:
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://tai.db.elephantsql.com:5432/rknrxxjn
-    username: rknrxxjn
-    password: twWQ7eKPWZJ_MGAVxIqLeifCu90opHXu
+    url: jdbc:postgresql://flora.db.elephantsql.com:5432/dsouclan
+    username: dsouclan
+    password: zj3xUytnbssVNPOgNykm9HSotos27nzD
   # JPA properties
   jpa:
-    hibernate.ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  #OAuthProperties
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: Ov23linQiavRp6Mnwb8p
+            clientSecret: 9dc1923ed24e320ada0f0d9d45e4b26883c0cc1d
+
+
 # Server configuration
 server:
-  port: 8081
-# Security configuration
-#security:
-  #user:
-    #name: user
-    #password: user
+  port: 8080
 
 # Logging configuration
 logging:
@@ -35,20 +48,10 @@ logging:
     file: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
 
 
-#OAuth settings
-  spring:
-    security:
-      oauth2:
-        client:
-          registration:
-            github:
-              clientId: Ov23linQiavRp6Mnwb8p
-              clientSecret: 9dc1923ed24e320ada0f0d9d45e4b26883c0cc1d
-              scope:
-                - user:email
-                - read:user
 
 
-#Komanda qe te besh run reportet e jococombos
-    #mvn clean test jacoco:report
-    #Mrp te target site ke reportin
+
+# Additional notes
+# To run Jacoco reports:
+# mvn clean test jacoco:report
+# You can find the report in the target/site directory
